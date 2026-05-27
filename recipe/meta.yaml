@@ -10,23 +10,24 @@ source:
   sha256: cc0b73bcbbca77527ae7712e97dc17f442313a57c2e2e3f654111d31e99d5f98
 
 build:
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   build:
-    - dotnet-sdk ~=9.0
+    - dotnet-sdk 10.0.*
+    - openssl
   host:
     - python
-    - setuptools >=61
+    - setuptools >=80
     - wheel
     - pip
     - packaging >=24
     - pyproject-parser >=0.14
   run:
     - clr_loader >=0.3.1,<0.4.0
-    - mono  # [not win]
-    - dotnet-runtime ~=9.0
+    - mono  >= 6.12 # [not win]
+    - dotnet-runtime >=3.1
     - python
 
 test:
