@@ -21,6 +21,8 @@ requirements:
     - setuptools >=61
     - wheel
     - pip
+    - packaging >=24
+    - pyproject-parser >=0.14
   run:
     - clr_loader >=0.2.6,<0.3.0
     - mono  # [not win]
