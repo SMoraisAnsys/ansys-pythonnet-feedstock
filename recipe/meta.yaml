@@ -15,7 +15,7 @@ build:
 
 requirements:
   build:
-    - dotnet-sdk ~=7.0
+    - dotnet-sdk ~=9.0
   host:
     - python
     - setuptools >=61
