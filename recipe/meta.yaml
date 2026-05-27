@@ -27,7 +27,6 @@ requirements:
   run:
     - clr_loader >=0.3.1,<0.4.0
     - python
-    - 
   run_constrained:
     - dotnet-runtime >=3.1
     - mono >=6.12  # [not win]
